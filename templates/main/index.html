@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Index page</title>
+    <link rel="stylesheet" href="{%static 'css/mainCSS/index.css '%}">
+    <meta name="keywords" content="library, books, reading">
+    <meta name="description" content="ReadCycle Library - Your gateway to a world of books">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+   
+<!-- Header Section -->
+    <header>
+         <div id="header-bar" class="header-bar">
+        <!-- Logo Section -->
+            <div class="logo">
+            <a href="{% url 'index' %}">
+                <img src="{%static 'image/logo.jpeg'%}" alt="Logo">
+            </a>
+            </div>
+        <!-- Search Bar Section -->
+
+        <div class="search-bar">
+            <form id="search-form">
+                <div class="search-options">
+                    <select id="search-options">
+                        <option value="ALL">ALL</option>
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button type="submit" id ="search-button">Search</button>
+            </form>
+            </div>
+        <!-- Account Icons  -->
+
+             <div class="account">
+            <ul>
+                <li><a href="{% url 'Login' %}">Login</a></li>
+                <li><a href="{% url 'Sign_Up' %}">SignUp</a></li>
+
+            </ul>
+             </div>
+        </div>
+        
+        <!-- Navigation Section -->
+        <nav id="navigation-bar" class="navigation-bar">
+            <ul>
+                <li><a href="Login" onclick="alert('First, you must login.')">Available Books</a></li>
+                <li><a href="Login" onclick="alert('First, you must login.')">Advanced Search</a></li>
+                <li><a href="Login" onclick="alert('First, you must login.')">View Available Books</a></li>
+            </ul>
+        </nav>
+
+    
+          
+    </header>
+<div class="content">
+   
+<!-- Trending Books -->
+   <section>
+    <div class="books">
+        <br>
+        <h1>Trending Books</h1>
+        <br>
+    <div class="book">
+       <br><br>
+        <a href="../books/It_Ends_with_Us.html">
+            <img alt="It Ends With Us" src="https://m.media-amazon.com/images/I/71Chcpw13lL._AC_UF1000,1000_QL80_.jpg" width="150" height="150">
+        </a>
+       <p><strong>Author:</strong> Colleen Hoover</p>
+       <p><strong>Status:</strong> Available</p>
+       <p><strong>ID:</strong> 7851</p>
+       <p><strong>Borrowed:</strong> No</p>
+       <p><strong>Date Added:</strong> March 18, 2024</p>
+    </div>
+
+    <div class="book">
+        <br><br>
+        <a href="../books/Find Your Artistic Voice.html">
+            <img alt="Find Your Artistic Voice" src="https://lisacongdon.com/cdn/shop/products/find_your_artistic_voice_flat_1500x1500.png?v=1615507046" width="150" height="150">
+        </a>
+                <p><strong>Author:</strong>Lisa Cangdon </p>
+                <p><strong>Status:</strong> Available</p>
+                <p><strong>ID:</strong> 1600</p>
+                <p><strong>Borrowed:</strong> No</p>
+                <p><strong>Date Added:</strong> March 18, 2024</p>
+            </div>
+
+
+    <div class="book">
+        <br> <br><a href="../books/Atomic Habits.html">
+            <img alt="Atomic Habits" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg" width="150" height="150">
+        </a>
+            <p><strong>Author:</strong> James Clear</p>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>ID:</strong> 2050</p>
+            <p><strong>Borrowed:</strong> No</p>
+            <p><strong>Date Added:</strong> March 18, 2024</p>
+    </div>
+
+    <div class="book">
+        <br> <br><a href="../books/Thinking, Fast and Slow.html">
+            <img alt="Thinking Fast And Slow" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1317793965i/11468377.jpg" width="150" height="150" >
+        </a>
+            <p><strong>Author:</strong>Daniel Kahneman  </p>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>ID:</strong> 2004</p>
+            <p><strong>Borrowed:</strong> No</p>
+            <p><strong>Date Added:</strong> March 18, 2024</p>
+        </div>
+    </div>
+ 
+</div>
+</section>
+
+
+<!-- footer -->
+<footer>
+
+    <div class="site-footer_social">
+        <h4 class="Big">connect with ReadCycle :</h4>
+        <br>
+        <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+        </div>
+
+    <div class="discover">
+        <h4 class="Big">Discover :</h4>
+        <br>
+        <ul class="wq">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="Login" onclick="alert('First, you must login.')">Books</a></li>
+                <li><a href="#top">Return To The Top</a></li>
+            </ul>
+    </div>
+
+
+    <div class="website-by">
+        <h4 class="Big">Website by : </h4>
+        <br>
+        <ul class="wq">
+            <li>Mohamed Rabea Mohamed / 20220424</li>
+            <li>Mahmoud Mustafa Anas / 20220323</li>
+            <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+            <li>Raghd Ahmed Mohamed / 20221059</li>
+            <li>Basant Shaker Ahmed / 20221037</li>
+            <li>Rana Esmail Zekry Moawad / 20220131</li>
+        </ul>
+    </div>
+
+
+</footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

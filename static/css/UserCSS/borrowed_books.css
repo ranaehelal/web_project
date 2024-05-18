@@ -1,0 +1,73 @@
+/* Content styles */
+.content {
+    padding: 60px; /* Reduced padding for better alignment */
+    text-align: center;
+    background-image: url("https://img.freepik.com/premium-photo/blurred-bookshelf-library-room-education_1025277-2014.jpg");
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content p {
+    color: cornsilk;
+    font-size: 35px; /* Reduced font size for better readability */
+    font-weight: bold; /* Bold to make the text stand out */
+    margin-bottom: 80px; /* Space below the title */
+}
+
+/* Table styling */
+.content table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Ensure no gaps between borders */
+    width: 80%; /* Limit the table width for better layout */
+        margin-bottom: 80px; /* Space below the title */
+
+}
+
+.content table thead tr {
+    background-color: #f4e1b7; /* Warm light shade for table header */
+}
+
+.content table thead td {
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #4d2e24; /* Slightly thicker border for separation */
+}
+
+.content table tbody td {
+    padding: 12px;
+    font-size: 18px; /* Smaller font for table content */
+    border: 1px solid #d2a677; /* Consistent border color */
+    background-color: #fff8dcbf; /* Light warm shade for row background */
+}
+
+.content table tbody tr:nth-child(even) {
+    background-color: #f4e1b7; /* Alternate row coloring */
+}
+
+.content table tbody tr:hover {
+    background-color: #e6c997; /* Highlight on hover */
+}
+
+/* Anchor styling */
+a {
+    text-decoration: none;
+    color: #4d2e24; /* Consistent with other elements */
+    font-weight: bold; /* Make links stand out */
+}
+
+a:hover {
+    color: #ffa500;
+}
+
+/* No-books message styling */
+#no-books-message {
+    color: cornsilk;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+
+
+

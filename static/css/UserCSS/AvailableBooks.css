@@ -1,0 +1,92 @@
+/* General styling for the table on the "Available Books" page */
+table {
+    width: 100%; /* Make the table span the full width of its container */
+    border-collapse: collapse; /* Ensure no extra space between cells */
+    margin-bottom: 20px; /* Add space below the table */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners for the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    overflow: hidden; /* Ensure content doesn't overflow the table boundaries */
+}
+
+/* Styling for table headers and cells */
+th, td {
+    padding: 12px 15px; /* Consistent padding for headers and cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Light border below each row */
+}
+
+/* Styling for table headers specifically */
+th {
+    background-color: #4d2e24; /* Darker background for headers */
+    color: #fff; /* White text for headers */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+
+/* Even rows have a different background color for better visibility */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #e6e6e6; /* Light gray background on hover */
+}
+
+/* Classes for different statuses, to visually indicate availability and borrowed status */
+.available {
+    color: green; /* Green text for available status */
+    font-weight: bold; /* Make the text bold */
+}
+
+.notavailable {
+    color: red; /* Red text for not available status */
+    font-weight: bold; /* Make the text bold */
+}
+
+.borrowed {
+    color: orange; /* Orange text for borrowed status */
+    font-weight: bold; /* Make the text bold */
+}
+
+.notBorrowed {
+    color: green; /* Green text for not borrowed status */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Styling for links to ensure consistency */
+a {
+    color: #4d3c01; /* Dark blue text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    color: hsl(41, 86%, 31%); /* Change color on hover */
+}
+
+/* Styling for the page heading */
+h2 {
+    font-size: 2.5rem; /* Larger font size for headings */
+    font-weight: bold; /* Make the text bold */
+    color: #000; /* Black text color */
+    text-align: center; /* Center the heading */
+    margin: 2rem 0; /* Add margin for spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add some spacing between letters */
+}
+
+/* Styling for the background image */
+.background-container {
+    background-image: url('https://img.freepik.com/premium-photo/blurred-bookshelf-library-room-education_1025277-2014.jpg'); /* Background image URL */
+    background-size: cover; /* Cover the entire page with the image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
+    position: fixed; /* Make the background fixed */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    z-index: -1; /* Ensure the background is behind other content */
+}

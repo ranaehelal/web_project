@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'css/UserCSS/headers.css'%}">
+    <link rel="stylesheet" href="{%static 'css/UserCSS/borrowed_books.css'%}">
+
+    <title>Borrowed Books</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-bar">
+            <div class="logo">
+            <a href="{% url 'User' %}">
+                    <img src="{%static 'image/logo.jpeg'%}" alt="Logo">  
+                </a>
+            </div>
+            <!-- Search Bar Section -->
+            <div class="search-bar">
+                <form id="search-form">
+                    <div class="search-options">
+                        <select id="search-options">
+                            <option value="ALL">ALL</option>
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                            <option value="category">Category</option>
+                        </select>
+                    </div>
+                    <input type="text" id="search-input" placeholder="Search...">
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </div>
+            <!-- Account Icons -->
+            <div class="account">
+                <ul>
+                    <li>My Account</li>
+                    <li>Wishlist</li>
+                    <li><a href="{% url 'index' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="{% url 'User' %}">Home</a></li>
+            <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+            <li><a href="{% url 'Search_books' %}">Advanced Search</a></li>
+            <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <p>Your Borrowed Books</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Borrow Date</th>
+                    <th>Return Date</th>
+                </tr>
+            </thead>
+            <tbody id="borrowed-books-list">
+             {% for book in borrowed_books %}
+                <tr>
+                    <td>{{ book.bookName }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.borrow_date|default:"Not Available" }}</td>
+                    <td>{{ book.return_date|default:"Not Available" }}</td>
+                </tr>
+                {% empty %}
+                <tr id="no-books-message">
+                    <td colspan="4">No borrowed books found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div id="no-books-message" style="display: none;">No books borrowed yet.</div>
+    </div>
+
+    <footer>
+
+        <div class="site-footer_social">
+            <h4 class="Big">connect with ReadCycle :</h4>
+            <br>
+            <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+        </div>
+    
+    
+        <div class="discover">
+            <h4 class="Big">Discover :</h4>
+            <br>
+            <ul class="wq">
+                <li><a href="{% url 'User' %}">Home</a></li>
+                <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+                <li><a href="{% url 'Search_books' %}">Advanced Search</a></li>
+               <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+                <li><a href="#top">Return to Top</a></li>
+                
+    
+            </ul>
+        </div>
+    
+    
+        <div class="website-by">
+            <h4 class="Big">Website by : </h4>
+            <br>
+            <ul class="wq">
+                <li>Mohamed Rabea Mohamed / 20220424</li>
+                <li>Mahmoud Mustafa Anas / 20220323</li>
+                <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+                <li>Raghd Ahmed Mohamed / 20221059</li>
+                <li>Basant Shaker Ahmed / 20221037</li>
+                <li>Rana Esmail Zekry Moawad / 20220131</li>
+            </ul>
+        </div>
+    
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="UserJS/Borrowed.js" defer></script> <!-- This script populates book cards -->
+    <script src="../books/storage.js" defer></script> <!-- This script populates book cards -->
+    <script src=" {% static 'js/Borrowed.js' %}"></script> <!-- Script to populate table -->
+
+</body>
+</html>

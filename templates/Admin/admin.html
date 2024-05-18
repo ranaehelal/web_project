@@ -1,0 +1,181 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Home Page</title>
+{#    <link rel="stylesheet" href="AdminCSS/admin.css">#}
+    <meta name="keywords" content="library, books, reading">
+    <meta name="description" content="ReadCycle Library - Your gateway to a world of books">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'css/admin.css/' %}">
+</head>
+
+
+<body>
+
+    <!-- Background image -->
+   <div class="background-container">
+        <img src="{%static 'image/ss.jpeg'%}"  alt="Background Image">
+    </div>
+
+
+
+
+    <!-- Header Section -->
+    <header id="header-bar" class="header-bar">
+
+
+
+    <!-- logo Section -->
+    <div class="logo-component">
+        <a href="{% url 'admin_HomePage' %}" title="ReadCycle Library">
+            <div class="logo-txt">
+                <img class="logo-icon" src="{%static 'image/logo.jpeg'%}"  alt="ReadCycle logo" >
+            </div>
+        </a>
+    </div>
+
+
+
+    <!-- search Section -->
+    <div class="container">
+        <div class="search-container">
+            <select id="searchType">
+                <option value="ALL">ALL</option>
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="category">Category</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <a href= "{% url 'Search_books' %}"> <button>Search</button></a>
+        </div>
+        <div id="searchResults">
+            <!-- Search results will be displayed here -->
+        </div>
+    </div>
+
+
+
+    <!-- authentication Section -->
+    <ul class="auth-component">
+        <li class="hide-me"><a class="btn" href="{% url 'index' %}">Log out</a></li>
+    </ul>
+    </header>
+
+
+
+    <!-- Navigation Bar -->
+    <nav id="navigation-bar" class="navigation-bar">
+
+        <ul>
+            <li>  <a href="">Admin Page</a>&nbsp;</li>
+            <li>  <a href="ViewBook_List" >View Book List</a>&nbsp;</li>
+            <li>  <a href="EditBook" >Edit Book details</a>&nbsp;</li>
+            <li>  <a href="DeleteBook" >Delete Book</a></li>
+            <li> <a href="AddBook" >Add New book</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <!-- Main content -->
+    <div class="w2">
+        <main>
+
+            <div class="title">
+                <h1> Admin Home Page </h1>
+
+                <h6> Home / Admin </h6>
+            </div>
+
+            <!-- Section 1: View Book List -->
+            <div class="section">
+                <a href="ViewBook_List"  class="ew">
+                    <h3 class="saw">View Book List</h3>
+
+                </a>
+            </div>
+
+            <!-- Section 2: Edit Book Details -->
+            <div class="section">
+                <a href="EditBook"  class="ew">
+                    <h3 class="saw">Edit Book Details</h3>
+
+                </a>
+            </div>
+
+            <!-- Section 2: Delete Book -->
+            <div class="section">
+                <a href="DeleteBook"  class="ew">
+                    <h3 class="saw">Delete Book</h3>
+
+                </a>
+            </div>
+
+            <!-- Section 3: Add new book -->
+            <div class="section">
+                <a href="AddBook"  class="ew">
+                    <h3 class="saw">Add New Book</h3>
+
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+
+
+<!-- footer -->
+<footer>
+
+    <div class="site-footer_social">
+        <h4 class="Big">connect with ReadCycle :</h4>
+        <br>
+        <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+    </div>
+
+
+    <div class="discover">
+        <h4 class="Big">Discover :</h4>
+        <br>
+        <ul class="wq">
+            <li><a href= " {% url 'index' %}">Main HomePage</a></li>
+            <li><a href="ViewBook_List">Books</a></li>
+            <li><a href="">Return to Top</a></li>
+
+        </ul>
+    </div>
+
+
+    <div class="website-by">
+        <h4 class="Big">Website by : </h4>
+        <br>
+        <ul class="wq">
+            <li>Mohamed Rabea Mohamed / 20220424</li>
+            <li>Mahmoud Mustafa Anas / 20220323</li>
+            <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+            <li>Raghd Ahmed Mohamed / 20221059</li>
+            <li>Basant Shaker Ahmed / 20221037</li>
+            <li>Rana Esmail Zekry Moawad / 20220131</li>
+        </ul>
+    </div>
+
+</footer>
+
+
+<script src="AdminJS/admin.js" defer></script>
+
+{#<script src="{% static 'js/admin.js' %}" defer></script>#}
+
+</body>
+</html>
+
+
+
+
+

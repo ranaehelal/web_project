@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name = "descriotion" content="book store">
+    <meta name="keywords" content="book, book store, authors"> 
+    <link rel="stylesheet" href="{%static 'css/UserCSS/User.css '%}">
+    <link rel="stylesheet" href="{%static 'css/UserCSS/headers.css '%}">
+    <script src="UserJS/User.js"></script>
+    <script src=" {% static 'js/User.js' %}"></script> <!-- Script to populate table -->
+
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="background-container"></div>
+    <header>
+        <div id="header-bar" class="header-bar">
+       <!-- Logo Section -->
+           <div class="logo">
+            <a href="{% url 'User' %}">
+    <img src="{%static 'image/logo.jpeg'%}" alt="Logo">
+           </a>
+           </div>
+       <!-- Search Bar Section -->
+
+           <div class="search-bar">
+           <form id="search-form">
+               <div class="search-options">
+                   <select id="search-options">
+                       <option value="ALL">ALL</option>
+                       <option value="title">Title</option>
+                       <option value="author">Author</option>
+                       <option value="category">Category</option>
+                   </select>
+               </div>
+               <input type="text" id="search-input" placeholder="Search...">
+               <button type="submit" id="search-button">Search</button>
+            </form>
+           </div>
+       <!-- Account Icons  -->
+
+            <div class="account">
+           <ul>
+               <li>My Account</li>
+               <li>Wishlist</li>
+               <li><a href="{% url 'index' %}">Logout</a></li>
+           </ul>
+            </div>
+       </div>
+       
+       <!-- Navigation Section -->
+       <nav id="navigation-bar" class="navigation-bar">
+        <ul>
+            <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+            <li><a href="{% url 'Search_books' %}">Advanced Search</a></li>
+            <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+            <li><a href="{% url 'Borrowed_books' %}">View Borrowed Books</a></li>
+            
+            
+           
+        </ul>
+    </nav>
+
+
+   
+         
+   </header>
+    <!-- Main content -->
+            <div class="form">
+               
+            <!-- Section 1: View Book List -->
+            <div class="section">
+                <a href="Available_books.html"  class="ew">
+                    <h3 class="saw">Available Books</h3>
+
+                </a>
+            </div>
+
+            <!-- Section 2: Edit Book Details -->
+            <div class="section">
+                <a href="Search_books.html"  class="ew">
+                    <h3 class="saw">Advanced Search</h3>
+
+                </a>
+            </div>
+
+            <!-- Section 2: Delete Book -->
+            <div class="section">
+                <a href="Borrow_book.html"  class="ew">
+                    <h3 class="saw">Borrow Book</h3>
+
+                </a>
+            </div>
+
+            <div class="section">
+                    <a href="Borrowed_books.html"  class="ew">
+                        <h3 class="saw">Borrowed Book</h3>
+    
+                    </a>
+            </div>
+                
+            </div>
+           
+
+
+
+    <div class="content">
+        <div class="category">
+            <h3>Art</h3>
+            <div class="book-container">
+                <div class="book mySlides">
+                    <!-- Book details here -->
+                    <a href="../books/Find Your Artistic Voice.html " class="book-link">
+                    <img alt="Find Your Artistic Voice  " src="https://lisacongdon.com/cdn/shop/products/find_your_artistic_voice_flat_1500x1500.png?v=1615507046">
+                    <p><strong>ID:</strong> 1600</p>
+                    <p><strong>Book Name:</strong>Find Your Artistic Voice </p>
+                    <p><strong>Author:</strong>Lisa Cangdon</p>
+                    <p><strong>Reading age:</strong> 9 - 12 years</p>
+                    <p><strong>Language:</strong> English</p>
+                </a>
+                </div>
+                <div class="book mySlides">
+                    <a href="../books/Your Brain On Art.html" class="book-link">
+                    <img alt="Elisabetta Sirani " src="https://cdn11.bigcommerce.com/s-3rl2qg0z2p/images/stencil/1280x1280/products/13526/41498/9780593449233_64222__42840.1681835054.jpg?c=1?imbypass=on">
+                    <p><strong>ID:</strong> 1600</p>
+                    <p><strong>Book Name:</strong>Your Brain On Art </p>
+                    <p><strong>Author:</strong>Susan Magsamen and Lvy Ross</p>
+                    <p><strong>Reading age:</strong> 9 - 12 years</p>
+                    <p><strong>Language:</strong> English</p>
+                    </a>
+                </div>
+                <!-- Add more books in the "Art" category if needed -->
+            </div>
+        </div>
+    
+        <div class="category">
+            <h3>Romance</h3>
+            <div class="book-container">
+                <div class="book mySlides">
+                    <a href="../books/It_Ends_with_Us.html" class="book-link">
+                    <img alt="It Ends with Us" src="https://m.media-amazon.com/images/I/71Chcpw13lL._AC_UF1000,1000_QL80_.jpg">
+                    <p><strong>ID:</strong> 7851</p>
+                    <p><strong>Book Name:</strong> It Ends with Us</p>
+                    <p><strong>Author:</strong> Colleen Hoover</p>
+                    <p><strong>Reading age:</strong> 17 and above</p>
+                    <p><strong>Language:</strong> English</p>
+                    </a>
+                    <!-- Book details here -->
+                </div>
+                <div class="book mySlides">
+                    <a href="../books/The_Picture_of_Dorian_Gray.html" class="book-link">
+                    <img alt="The Picture of Dorian Gray" src="https://mpd-biblio-covers.imgix.net/9781466805064.jpg" width="250" height="400">
+                    <div class="book-info">
+                        <p><strong>ID:</strong> 6548</p>
+                        <p><strong>Book Name:</strong> The Picture of Dorian Gray</p>
+                        <p><strong>Author:</strong> Oscar Wilde</p>
+                        <p><strong>Reading age:</strong> 18 years and up</p>
+                        <p><strong>Language:</strong> English</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h3>Psychology</h3>
+            <div class="book-container">
+                <div class="book mySlides">
+                    <!-- Book details here -->
+                    <a href="../books/Atomic Habits.html" class="book-link">
+                    <img alt="Atomic Habits" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg">
+                    <p><strong>ID:</strong> 2050</p>
+                    <p><strong>Book Name:</strong>Atomic Habits</p>
+                    <p><strong>Author:</strong>James Clear </p>
+                    <p><strong>Reading age:</strong> 10 years and up</p>
+                    <p><strong>Language:</strong> English</p>
+                </a>
+                </div>
+                <div class="book mySlides">
+                    <a href="../books/Drive.html" class="book-link">
+                    <img alt="Drive" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348931599i/6452796.jpg" width="250" height="400" >
+                    <p><strong>ID:</strong> 2077</p>
+                    <p><strong>Book Name:</strong>Drive</p>
+                    <p><strong>Author:</strong>Daniel H. Pink </p>
+                    <p><strong>Reading age:</strong> no specific age requirement</p>
+                    <p><strong>Language:</strong> English</p>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h3>Technology</h3>
+            <div class="book-container">
+                <div class="book mySlides">
+                    <!-- Book details here -->
+                    <a href="../books/Crossing_the_Chasm_3rd_Edition.html" class="book-link">
+                    <img alt="Crossing the Chasm, 3rd Edition" src="https://m.media-amazon.com/images/I/41qAc+VG7SL._SL500_.jpg" >
+                        <p><strong>ID:</strong> 1907</p>
+                        <p><strong>Book Name:</strong>Crossing the Chasm, 3rd Edition</p>
+                        <p><strong>Author:</strong>Geoffrey A. Moore </p>
+                        <p><strong>Reading age:</strong> 18 years and up</p>
+                        <p><strong>Language:</strong> English</p>
+                    </a>
+                </div>
+                <div class="book mySlides">
+                    <a href="../books/Inspired.html" class="book-link">
+                    <img alt="Inspired" src="https://m.media-amazon.com/images/I/41Gc1klZ0DL._SL500_.jpg" width="250" height="400" >
+                    <p><strong>ID:</strong> 3040</p>
+                    <p><strong>Book Name:</strong>Inspired</p>
+                    <p><strong>Author:</strong>Marty Cagan</p>
+                    <p><strong>Reading age:</strong> 17 and above</p>
+                    <p><strong>Language:</strong> English</p>
+                </a>
+                </div>
+                <!-- Add more books in the "Psychology" category if needed -->
+            </div>
+        </div>
+    </div>
+    
+ 
+    <footer>
+
+        <div class="site-footer_social">
+            <h4 class="Big">connect with ReadCycle :</h4>
+            <br>
+            <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+        </div>
+    
+    
+        <div class="discover">
+            <h4 class="Big">Discover :</h4>
+            <br>
+            <ul class="wq">
+                <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+                <li><a href="{% url 'Search_books' %}">Advanced Search</a></li>
+               <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+                <li><a href="{% url 'Borrowed_books' %}">View Borrowed Books</a></li>
+                <li><a href="#top">Return to Top</a></li>
+                
+                
+    
+            </ul>
+        </div>
+    
+    
+        <div class="website-by">
+            <h4 class="Big">Website by : </h4>
+            <br>
+            <ul class="wq">
+                <li>Mohamed Rabea Mohamed / 20220424</li>
+                <li>Mahmoud Mustafa Anas / 20220323</li>
+                <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+                <li>Raghd Ahmed Mohamed / 20221059</li>
+                <li>Basant Shaker Ahmed / 20221037</li>
+                <li>Rana Esmail Zekry Moawad / 20220131</li>
+            </ul>
+        </div>
+    
+    </footer>
+        
+        
+</body>
+</html>

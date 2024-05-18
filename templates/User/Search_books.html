@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search book</title>
+    <link rel="stylesheet" href="{%static 'css/UserCSS/headers.css'%}">
+    <link rel="stylesheet" href="{%static 'css/UserCSS/Search.css'%}">
+    <meta name="keywords" content="library, books, reading">
+    <meta name="description" content="ReadCycle Library - Your gateway to a world of books">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div id="header-bar" class="header-bar">
+            <!-- Logo Section -->
+            <div class="logo">
+            <a href="{% url 'User' %}">
+                    <img src="{%static 'image/logo.jpeg'%}" alt="Logo">       
+                </a>
+            </div>
+            <!-- Account Icons  -->
+            <div class="account">
+                <ul>
+                    <li>My Account</li>
+                    <li>Wishlist</li>
+                    <li><a href="{% url 'index' %}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Navigation Section -->
+        <nav id="navigation-bar" class="navigation-bar">
+            <ul>
+                <li><a href="{% url 'User' %}">Home</a></li>
+                <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+                <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+                <li><a href="{% url 'Borrowed_books' %}">View Borrowed Books</a></li>
+                
+              
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search Bar Section -->
+        <h1>Search for books</h1>
+        <div class="main-search-bar">
+            <form id="search-form">
+                <div class="search-options">
+                    <select id="search-options">
+                        <option value="ALL">ALL</option>
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+                <input type="text" id="search-input" placeholder="Search by title, author, category...">
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </div>
+        
+        <p id="match-not-found" style="display: none;">Match not found</p>
+
+        <!-- Book List Container -->
+        <div class="books" id="book-list"></div>
+    </main>
+
+    <footer>
+
+        <div class="site-footer_social">
+            <h4 class="Big">connect with ReadCycle :</h4>
+            <br>
+            <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+        </div>
+    
+    
+        <div class="discover">
+            <h4 class="Big">Discover :</h4>
+            <br>
+            <ul class="wq">
+                <li><a href="{% url 'User' %}">Home</a></li>
+                <li><a href="{% url 'Available_books' %}">Available Books</a></li>
+                <li><a href="{% url 'Search_books' %}">Advanced Search</a></li>
+                <li><a href="{% url 'Borrow_book' %}">Borrow Book</a></li>
+                <li><a href="#top">Return to Top</a></li>
+    
+            </ul>
+        </div>
+    
+    
+        <div class="website-by">
+            <h4 class="Big">Website by : </h4>
+            <br>
+            <ul class="wq">
+                <li>Mohamed Rabea Mohamed / 20220424</li>
+                <li>Mahmoud Mustafa Anas / 20220323</li>
+                <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+                <li>Raghd Ahmed Mohamed / 20221059</li>
+                <li>Basant Shaker Ahmed / 20221037</li>
+                <li>Rana Esmail Zekry Moawad / 20220131</li>
+            </ul>
+        </div>
+    
+    </footer>
+    <script src="UserJS/Search.js" defer></script> 
+    <script src=" {% static 'js/Search.js' %}"></script> <!-- Script to populate table -->
+
+
+</body>
+</html>

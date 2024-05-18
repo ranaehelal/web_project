@@ -1,0 +1,159 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Book</title>
+{#    <link rel="stylesheet" href="AdminCSS/delete_book.css">#}
+    <meta name="keywords" content="library, books, reading">
+    <meta name="description" content="ReadCycle Library - Your gateway to a world of books">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'css/delete_book.css/' %}">
+</head>
+
+
+<body>
+
+
+    <!-- Background image -->
+   <div class="background-container">
+        <img src="{%static 'image/ss.jpeg'%}" alt="Background Image">
+    </div>
+
+
+
+    <!-- Header Section -->
+    <header id="header-bar" class="header-bar">
+
+
+
+    <!-- logo Section -->
+    <div class="logo-component">
+        <a href="{% url 'admin_HomePage' %}" title="ReadCycle Library">
+            <div class="logo-txt">
+                <img class="logo-icon" src="{%static 'image/logo.jpeg'%}"  alt="ReadCycle logo" >
+            </div>
+        </a>
+    </div>
+
+
+
+    <!-- search Section -->
+    <div class="container">
+        <div class="search-container">
+            <select id="searchType">
+                <option value="ALL">ALL</option>
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="category">Category</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search...">
+            <a href="../user/Search_books.html"> <button>Search</button></a>
+        </div>
+        <div id="searchResults">
+            <!-- Search results will be displayed here -->
+        </div>
+    </div>
+
+
+
+    <!-- authentication Section -->
+    <ul class="auth-component">
+        <li class="hide-me"><a class="btn" href="{% url 'index' %}">Log out</a></li>
+    </ul>
+    </header>
+
+
+
+    <!-- Navigation Bar -->
+    <nav id="navigation-bar" class="navigation-bar">
+
+         <ul>
+            <li>  <a href="./">Admin Page</a>&nbsp;</li>
+            <li>  <a href="ViewBook_List" >View Book List</a>&nbsp;</li>
+            <li>  <a href="EditBook" >Edit Book details</a>&nbsp;</li>
+            <li>  <a href="DeleteBook" >Delete Book</a></li>
+            <li> <a href="AddBook" >Add New book</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <!--Main content-->
+    <div class="w2">
+        <main>
+            <div class="title">
+                <h1> Delete Book </h1>
+                <h6> Home / Admin / Delete book </h6>
+            </div>
+
+            <form class="addForm" action=" " method="" >
+{#           <form action="{% url 'delete_book_view' %}" method="post" class="addForm">#}
+                <label for="book_id" class="addLabel" >Enter Book ID / Name to Delete :</label>
+                <br>
+
+                <input class="addInput" type="text" id="book_id" name="book_name" placeholder="Book ID / Name" required>
+                <button  class="addButton" type="submit"  >Delete Book</button>
+           </form>
+        </main>
+    </div>
+
+
+
+
+<!-- footer -->
+<footer>
+
+    <div class="site-footer_social">
+        <h4 class="Big">connect with ReadCycle :</h4>
+        <br>
+        <a href="https://www.facebook.com" target="_blank"><img src="{%static 'image/social_media/facebook.png'%}" alt="Facebook"  width ="30px" height="30px"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="{%static 'image/social_media/twitter.png'%}" alt="Twitter"   width ="30px" height="30px"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="{%static 'image/social_media/insta.png'%}"alt="Instagram"   width ="30px" height="30px"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="{%static 'image/social_media/linkdin.png'%}" alt="LinkedIn"   width ="30px" height="30px"></a>
+    </div>
+
+
+
+    <div class="discover">
+        <h4 class="Big">Discover :</h4>
+        <br>
+        <ul class="wq">
+            <li><a href="../main/index.html">Main HomePage</a></li>
+            <li><a href="ViewBook_List">Books</a></li>
+            <li><a href="DeleteBook">Return to Top</a></li>
+
+        </ul>
+    </div>
+
+
+    <div class="website-by">
+        <h4 class="Big">Website by : </h4>
+        <br>
+        <ul class="wq">
+            <li>Mohamed Rabea Mohamed / 20220424</li>
+            <li>Mahmoud Mustafa Anas / 20220323</li>
+            <li>Ahmed Abdelaziz Ahmed / 20220025</li>
+            <li>Raghd Ahmed Mohamed / 20221059</li>
+            <li>Basant Shaker Ahmed / 20221037</li>
+            <li>Rana Esmail Zekry Moawad / 20220131</li>
+        </ul>
+    </div>
+
+</footer>
+
+
+
+<script src="/admin/AdminJS/delete_book.js"></script>
+
+{#<script src="{% static 'js/delete_book.js' %}"></script>#}
+
+</body>
+
+</html>
+
+
+
+
+
