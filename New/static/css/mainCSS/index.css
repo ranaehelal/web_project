@@ -1,0 +1,281 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: Arial, sans-serif;
+
+    
+}
+
+/* Header styles */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    background-color: #4e2d24;
+    color: wheat;
+}
+
+/* Logo styles */
+.logo {
+    margin-right: 300px; /* Adjust space between logo and search bar */
+}
+
+.logo img {
+    width: 130px; /* Adjust width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+
+.logo:hover img {
+    transform: scale(1.06);
+}
+
+/* Search bar styles */
+.search-bar {
+    flex: 1; /* Take remaining space */
+    margin-right: 20px; /* Adjust space between search bar and account icons */
+    margin-left: 20px;
+    
+}
+
+.search-bar form {
+    display: flex;
+}
+.search-bar input[type="text"] {
+    width: 300px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+.search-bar #search-button{
+    width: 70px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border: none;
+    background-color: wheat;
+    cursor: pointer;
+}
+ #search-button:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}
+
+
+.search-bar select {
+    background-color: #f0f0f0; /* Change the background color */
+    color: #333; /* Change the text color */
+    width: 70px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+
+.search-bar select,
+.search-bar input[type="text"],
+.search-bar #search-button {
+    border-radius: 5px; /* Add border radius */
+    font-size: 16px; /* Change the font size */
+    margin-right: 10px; /* Adjust space between form elements */
+}
+
+/* Account styles */
+.account ul {
+    list-style: none;
+    display: flex;
+}
+
+.account ul li {
+   color :rgb(234, 224, 188);
+    margin-right: 20px; /* Adjust space between account options */
+}
+
+.account ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.account ul li a {
+    text-decoration: none;
+    color: #333; /* Adjust color of account options */
+    color:rgb(234, 224, 188)
+}
+
+.account ul li a:hover {
+    color: #ffa500;
+}
+
+/* Navigation styles */
+.navigation-bar{
+    padding-left: 20px;
+    background-color:rgb(234, 224, 188);
+}
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    padding: 15px;
+}
+
+.navigation-bar ul li {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 20px; /* Adjust space between navigation items */
+}
+
+.navigation-bar ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.navigation-bar ul li a {
+    color: #4e2d24;
+    text-decoration: none;
+}
+
+.navigation-bar ul li a:hover  {
+    color: #ffa500;
+
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Footer styles */
+footer {
+    background-color:#4d2e24;  
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer_social,
+.discover,
+.website-by {
+    width: 30%;
+
+}
+
+.site-footer_social a {
+    margin-right: 10px;
+    transition: transform 0.3s ease; 
+
+}
+
+.site-footer_social a :hover {
+    transform: scale(1.32);
+
+}
+
+
+.discover ul,
+.website-by ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.discover ul li,
+.website-by ul li {
+    margin-bottom: 10px;
+}
+
+.discover ul li a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.discover ul li a:hover {
+    color: #ffa500;
+
+}
+
+.Big{
+    font-family: "copperplate";
+    /*font-size: x-large;*/
+    font-size: 1.275rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: navajowhite;
+}
+
+.wq >br {
+    font-family: "Arial Hebrew";
+    /*font-size: x-large;*/
+    font-size: smaller;
+    font-weight: 100;
+
+    color: navajowhite;
+}
+/*    ------------------------------------------------------------------------------------------------------------ */
+Additional styles
+h2,
+h3 {
+    color: navajowhite;
+    /*text-decoration: none;*/
+}
+
+h3 {
+    margin-bottom: 20px;
+    /*text-decoration: none;*/
+}
+
+
+main {
+    margin: 3px;
+}
+
+/* Book container styles */
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('https://img.freepik.com/premium-photo/blurred-bookshelf-library-room-education_1025277-2014.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background: blur(10px); /* Add blur effect */
+
+
+}
+
+/* Individual book styles */
+.book {
+    width: 250px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #cccccc6d;
+    border-radius: 5px;
+    background-color: rgba(251, 223, 190, 0.408);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: large;
+}
+
+/* Book image styles */
+.book img {
+    width: 180px;
+    height: 60px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Scale up the image on hover */
+.book img:hover {
+    transform: scale(1.1); /* Scale up by 10% */
+}
+
+/* Name styles */
+.book a {
+    text-decoration: none; /* Remove text decoration */
+    color: inherit; /* Inherit color from parent */
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.book a:hover {
+    font-size: 1.1em; /* Increase font size */
+    color: bisque; /* Change color to a brighter shade */
+}
+h1{
+ color: rgb(234, 224, 188);
+ font-size: 170px;
+}
+
+
+

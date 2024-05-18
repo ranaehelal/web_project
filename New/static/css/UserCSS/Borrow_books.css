@@ -1,0 +1,123 @@
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    background-image: url('https://img.freepik.com/premium-photo/blurred-bookshelf-library-room-education_1025277-2014.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.615);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+}
+
+.book-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.book-card .borrow-button {
+    background-color: #766105;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.book-card .borrow-button:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-card a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.book-card a:hover {
+    font-size: 1.1em;
+    color: bisque;
+}
+
+#match-not-found {
+    color: red;
+    font-size: 60px;
+    text-align: center;
+    margin: 150px;
+    margin-left: 500px;
+    display: none;
+}
+
+.heart {
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
+    background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    transition: background-color 0.2s ease-in-out;
+    margin-left: 140px;
+}
+
+.heart:hover {
+    background-position: right;
+    animation: heart-burst 0.8s steps(28) 1;
+}
+
+.heart.red {
+    background-position: right;
+    animation: heart-burst 0.8s steps(28) 1;
+}
+
+@keyframes heart-burst {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}

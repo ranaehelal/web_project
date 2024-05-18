@@ -1,0 +1,199 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.form {
+    margin-top: 60px;
+
+}
+.saw {
+    max-width: 600px;
+    text-align: center;
+    font-size: x-large;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    margin: auto ;
+    margin-top: 12px;
+
+    padding: 18px;
+
+    background-color: bisque;
+    color: #4e2d24;
+
+    /*border-radius: 5px;*/
+
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+
+}
+.saw:hover{
+    transform: scale(1.1); /* Scale the button slightly on hover */
+
+}
+.ew{
+    text-decoration: none;
+}
+
+/* Logo styles */
+.logo {
+    width: 110px;
+    height: 110px;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 15px; 
+}
+
+nav ul .icons,
+nav ul .search {
+    display: flex;
+    align-items: center;
+}
+
+nav ul .icons li,
+nav ul .search li {
+    margin-right: 20px; 
+}
+
+nav ul .search li:last-child {
+    margin-right: 0; 
+}
+
+.search-options {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #273f67;
+}
+
+nav a:hover {
+    color: #555; 
+}
+
+/* Content styles */
+
+
+
+.background-container {
+    background-image: url('https://img.freepik.com/premium-photo/blurred-bookshelf-library-room-education_1025277-2014.jpg');
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    position: fixed; /* Make the background fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    right: 0; /* Position at the right */
+    bottom: 0; /* Position at the bottom */
+    z-index: -1; /* Ensure background is behind content */
+}
+/* Styles for the slideshow container */
+.content {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.category {
+    width: 100%; /* Make each category take up the full width */
+    margin: 20px auto; /* Center the category */
+    text-align: left;
+}
+
+.category h3 {
+    color: #fff; /* Color of the category title */
+    font-size: 32px; /* Font size of the category title */
+    font-weight: bold; /* Font weight of the category title */
+    text-transform: uppercase; /* Convert text to uppercase */
+    margin-bottom: 10px; /* Bottom margin of the category title */
+    display: inline-block; /* Ensure inline-block to allow border */
+    padding: 10px 20px; /* Padding inside the category title */
+    border-bottom: 2px solid #ccc; /* Underline effect for the category title */
+    border-radius: 5px; /* Rounded corners for the border */
+}
+
+
+
+
+.book-container {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+}
+
+.book {
+    flex: 0 0 auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.book img {
+max-width: 200px;
+height: auto;
+}
+
+/* Add some colors */
+.category h3 {
+color: #fff;
+}
+
+.book p {
+color: #eae0bc;
+}
+
+.book:hover p {
+color: #FFF;
+}
+.book-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+.book-info p {
+    color: #eae0bc;
+}
+
+/* Apply styles to the book info paragraphs on hover */
+.book:hover .book-info p {
+    color: #FFF;
+}

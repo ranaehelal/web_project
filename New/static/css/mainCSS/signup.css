@@ -1,0 +1,70 @@
+
+
+/*content styles*/
+.content{
+    padding: 100px;
+    padding-top: 10px;
+    text-align: left;
+    background-image: url("https://wallpaperaccess.com/full/934072.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#SignUp{
+    padding: 20px;
+    margin: 20px;
+    padding-left: 12px;
+    font-size: 40px;
+    color: cornsilk;
+}
+.signup-form {
+    max-width: 400px;
+    margin-right: 5px;
+    margin-left: 10px;
+    padding: 20px ;
+    border: 1px solid #3f2705;
+    border-radius: 8px;
+    background-color:rgb(238, 233, 214)
+}
+
+div p {
+    color: #4d2e24;
+    font-weight: bold;
+}
+
+/*Buttons styles*/
+
+div label {
+    font-weight: bold;
+    color: #4d2e24;
+}
+
+.signup-form  input[type = "text"] , input[type = "password"],input[type="email"]{
+    width:100%;
+    padding:10px;
+    background-color: cornsilk;
+    color:#4d2e24;
+    border-radius: 4px;
+}
+
+
+input[type = "submit"]{
+    width:100%;
+    padding:10px;
+    background-color: #4d2e24;
+    color:cornsilk;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+form p {
+    padding :12px;
+}
+
+/* Password hint */
+.password-hint {
+    font-size: 9px;
+    color: #3b2d05ee;
+}
+
