@@ -1,0 +1,381 @@
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.w2{
+    width: 58%;
+    margin: 0 auto; /* top and bottom margin 0, left and right margins auto */
+}
+
+.saw {
+    max-width: 600px;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: auto ;
+    margin-top: 12px;
+    padding: 18px;
+    background-color: bisque;
+    color: #4e2d24;
+}
+
+.saw:hover{
+    transform: scale(1.1); /* Scale the button slightly on hover */
+    color: #ffa500;
+}
+
+.ew{
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+/*    ------------------------------------------------------------------------------------------------------------ */
+/*Main CSS*/
+
+main{
+
+
+    margin-bottom: 140px;
+    margin-top: 110px;
+    width: 820px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 40px 80px 40px;
+}
+/*    ------------------------------------------------------------------------------------------------------------ */
+/*Background CSS*/
+
+.background-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-image: url("../../photos/ss.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Navigation styles */
+
+.navigation-bar {
+    padding-left: 20px;
+    background-color: rgb(234, 224, 188);
+}
+
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    padding: 15px;
+
+}
+
+.navigation-bar ul li {
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 20px;
+    /*  space between navigation items */
+}
+
+.navigation-bar ul li:last-child {
+    margin-right: 22px;
+    /* Remove margin from the last item */
+}
+
+.navigation-bar ul li a {
+    color: #4e2d24;
+    text-decoration: none;
+}
+
+.navigation-bar ul li a:hover {
+    color: #ffa500;
+
+
+}
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Form styles */
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #273f67;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Footer styles */
+
+footer {
+    background-color: #4e2d24;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer_social,
+.discover,
+.website-by {
+    width: 30%;
+
+}
+
+.site-footer_social a {
+    margin-right: 10px;
+
+}
+
+.site-footer_social a :hover {
+    transform: scale(1.32);
+
+}
+
+.discover ul,
+.website-by ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.discover ul li,
+.website-by ul li {
+    margin-bottom: 10px;
+}
+
+.discover ul li a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.discover ul li a:hover {
+    color: #ffa500;
+
+}
+
+.Big{
+    font-family: "copperplate";
+    /*font-size: x-large;*/
+    font-size: 1.275rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: navajowhite;
+}
+
+.wq >br {
+    font-family: "Arial Hebrew";
+    /*font-size: x-large;*/
+    font-size: smaller;
+    font-weight: 100;
+
+    color: navajowhite;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Header styles */
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    background-color: #4e2d24;
+    color: #fff;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/*Logo CSS*/
+
+.logo-component {
+    width: 20%;
+}
+
+.logo-txt {
+    width: 110px;
+    height: 110px;
+}
+
+.logo-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+
+    transform: scale(1.12);
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/*Login CSS*/
+
+.auth-component {
+    width: 20%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-component li {
+    margin-left: 20px;
+}
+
+.auth-component a {
+    text-decoration: none;
+    font-size: large;
+    color: navajowhite;
+}
+
+.auth-component a:hover {
+    color: #ffa500;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/*Search-bar CSS*/
+
+.search-container {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}
+
+
+#searchResults {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.search-container {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: bisque;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+#searchResults {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+/*    ------------------------------------------------------------------------------------------------------------ */
+/* Form styles */
+
+.title {
+    /*margin-top: 20px;*/
+    text-align: center;
+    font-family: "Hoefler Text";
+    font-size: x-large;
+    color: navajowhite;
+    /*margin-bottom: 120px;*/
+    margin: 60px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #273f67;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*    ------------------------------------------------------------------------------------------------------------ */
